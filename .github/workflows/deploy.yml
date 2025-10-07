@@ -26,10 +26,10 @@ jobs:
         run: dotnet restore WeatherApp.csproj
 
       - name: Build application
-        run: dotnet build WeatherApp/WeatherApp.csproj --configuration Release --no-restore
+        run: dotnet build WeatherApp.csproj --configuration Release --no-restore
 
       - name: Run tests
-        run: dotnet test WeatherApp/WeatherApp.csproj --no-build --verbosity normal || true
+        run: dotnet test WeatherApp.csproj --no-build --verbosity normal || true
 
       - name: Azure Login
         uses: azure/login@v1
